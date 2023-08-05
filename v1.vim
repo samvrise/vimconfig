@@ -1,21 +1,26 @@
 " set relativenumber
-set nu
-set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set scrolloff=8
-set mouse=a
-set wildmenu
-set foldmethod=indent
-set foldnestmax=3
-set nofoldenable
-set confirm
-set hidden
-set history=1000
-set spell
-set nocompatible
+"
+
+" set nu
+" set noerrorbells
+" set tabstop=4 softtabstop=4
+" set shiftwidth=4
+" set scrolloff=8
+" set mouse=a
+" set wildmenu
+" set foldmethod=indent
+" set foldnestmax=3
+" set nofoldenable
+" set confirm
+" set hidden
+" set history=1000
+" set spell
+" set nocompatible
 
 
+lua <<EOF
+	require('sam')
+EOF
 
 call plug#begin('~/.vim/plugged/')
 
@@ -235,7 +240,6 @@ vim.lsp.diagnostic.on_publish_diagnostics, {
 
 
 -- Diagnostics settings
-
 
 local signs = { Error = "⛔", Warn = "⚠️", Hint = "💡", Info = "ℹ️ " }
 
